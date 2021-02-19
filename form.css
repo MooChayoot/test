@@ -1,0 +1,84 @@
+body .main-form {
+  position: relative;
+  font-family: "Sarabun";
+}
+body .main-form .s-form {
+  max-width: 790px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+body .main-form .s-form .header-form h1 {
+  font-weight: 500;
+  text-align: center;
+  font-size: 42px;
+  line-height: 66px;
+}
+body .main-form .s-form .header-form h1 .h1col {
+  color: #f48c7f;
+}
+body .main-form .s-form .header-form h3 {
+  font-weight: 500;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 30px;
+}
+body .main-form .s-form .form-form {
+  max-width: 520px;
+  margin: 0 auto;
+}
+body .main-form .s-form .form-form form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+body .main-form .s-form .form-form form .title-form {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+body .main-form .s-form .form-form form .title-form h2 {
+  font-size: 26px;
+  font-weight: 500;
+}
+body .main-form .s-form .form-form form .email-form {
+  padding-left: 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  height: 45px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 10px;
+  margin-bottom: 25px;
+}
+body .main-form .s-form .form-form form .email-form i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  font-size: 18px;
+}
+body .main-form .s-form .form-form form .email-form .email-input {
+  padding-left: 30px;
+  padding-top: 6px;
+  height: 45px;
+  border: none;
+  padding: 0;
+  width: 100%;
+  font-size: 16px;
+  line-height: 45px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
