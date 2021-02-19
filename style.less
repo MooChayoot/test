@@ -1,0 +1,273 @@
+// @import "grid.less";
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -o-border-radius: @radius;
+    -ms-border-radius: @radius;
+    border-radius: @radius;
+}
+
+body {
+    transform: translate(0, 0);
+    margin: 0;
+    font-family: 'Sarabun', sans-serif;
+
+    .img-b img {
+        position: relative;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .showmobile {
+        display: none;
+    }
+
+    .showdek {
+        display: block;
+    }
+
+    .text-b {
+        padding-top: 6.2%;
+        position: absolute;
+        top: 0px;
+        color: aliceblue;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        h1 {
+            // padding: 0 15px 0 15px;
+            width: 100%;
+            margin: 1px auto;
+            max-width: 400px;
+        }
+
+        .text-d {
+
+            // padding: 0 15px 0 15px;
+            width: 100%;
+            margin: auto;
+            font-size: 20px;
+            max-width: 600px;
+        }
+    }
+
+    .block-a {
+        position: relative;
+
+        &::before {
+            content: "";
+            background-image: url(bg-list.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+        }
+
+        .fix-width {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 70px 20px 70px 20px;
+
+            .flexbox {
+                display: block;
+            }
+
+            .flex-parent {
+                display: flex;
+                flex-flow: row wrap;
+                margin: 0 -15px -30px -15px;
+
+            }
+
+            .flex-child {
+                position: relative;
+                margin-left: 15px;
+                margin-right: 15px;
+                flex: 0 0 calc(33.33% - 30px);
+                max-width: calc(33.33% - 30px);
+                margin-bottom: 30px;
+                background-color: rgba(255, 255, 255, .9);
+
+                // .border-radius(10px);
+                .header-box {
+                    .img-box {
+                        padding: 30px;
+
+                        i {
+                            font-size: 80px;
+                            line-height: 80px;
+                            color: red;
+                        }
+                    }
+
+                    .htext {
+                        margin-bottom: 15px;
+
+                        .lasthead-text {
+                            text-transform: uppercase;
+                            padding: 0 30px;
+                            font-size: 30px;
+                            line-height: 36px;
+                            color: #1b1725;
+                        }
+                    }
+                }
+
+                .body-box {
+                    margin-bottom: 22px;
+
+                    .lastbody-text {
+                        padding: 0 30px;
+                        font-size: 16px;
+                        line-height: 26px;
+                        color: #61707d;
+                    }
+                }
+            }
+        }
+    }
+
+    .description {
+        background-color: black;
+
+        .text-box {
+            padding: 20px;
+        }
+
+        .flex-parent {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            background: #000;
+        }
+
+        .flex-child {
+            flex: 0 0 calc(50%);
+            max-width: calc(50%);
+        }
+
+        .title-des {
+            // padding-right: 15px;
+            margin-bottom: 30px;
+            font-size: 36px;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        .description-des {
+            // padding-right: 15px;
+            font-size: 18px;
+            color: #fff;
+            text-align: left;
+        }
+
+        .btn-call {
+            text-decoration: none;
+            .button-des {
+                text-align: left;
+                width: 150px;
+                padding: 15px;
+                background-image: linear-gradient(90deg, #B2282D 0%, #FF8B9F 100%);
+                margin-top: 15px;
+
+                .cr {
+                    color: white;
+                }
+
+                .text-btn {
+                    text-align: center;
+                    color: white;
+                    margin-left: 2px;
+                }
+
+
+            }
+
+            &:hover {
+                .button-des {
+                    background: linear-gradient(270deg, #9f4853 0, #7c1b1f 100%)
+                }
+            }
+        }
+    }
+
+    .img-des-mm {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 767px) {
+    body {
+        .block-a {
+            .fix-width {
+                .flex-child {
+                    flex: 0 0 calc(50% - 30px);
+                    max-width: calc(50% - 30px);
+
+                    .body-box .lastbody-text {
+                        font-size: 16px;
+                    }
+
+                    .header-box .htext .lasthead-text {
+                        font-size: 24px;
+                    }
+
+                    .text-b {
+                        .text-d {
+                            font-size: 16px;
+                        }
+
+                        h1 {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .description {
+            .flex-child {
+                flex: 0 0 calc(100%);
+                max-width: calc(100%);
+            }
+            .title-des {
+                font-size: 24px;
+            }
+
+            .description-des {
+                font-size: 16px;
+            }
+        }
+
+        .showmobile {
+            display: block;
+        }
+
+        .showdek {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        .block-a {
+            .fix-width {
+                .flex-child {
+                    flex: 0 0 calc(100% - 30px);
+                    max-width: calc(100% - 30px);
+                }
+            }
+        }
+    }
+}
