@@ -2,6 +2,10 @@ body .main-form {
   position: relative;
   font-family: "Sarabun";
 }
+body .main-form .fh_med {
+  font-family: Sarabun;
+  font-weight: 500;
+}
 body .main-form .s-form {
   max-width: 790px;
   margin: 0 auto;
@@ -33,6 +37,36 @@ body .main-form .s-form .form-form form {
   margin-right: -10px;
   margin-left: -10px;
 }
+body .main-form .s-form .form-form form .samp-all {
+  font-size: 16px;
+  line-height: 45px;
+  color: #777;
+  z-index: 1;
+  position: absolute;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  font-family: "Sarabun";
+}
+body .main-form .s-form .form-form form .focus {
+  font-size: 14px;
+  line-height: 18px;
+  top: 0;
+}
+body .main-form .s-form .form-form form .fogus {
+  outline: 0;
+}
+body .main-form .s-form .form-form form .samp-err {
+  font-size: 14px;
+  line-height: 14px;
+  color: red;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  font-family: "Sarabun";
+}
 body .main-form .s-form .form-form form .title-form {
   margin-top: 50px;
   margin-bottom: 25px;
@@ -61,8 +95,98 @@ body .main-form .s-form .form-form form .email-form i {
   font-size: 18px;
 }
 body .main-form .s-form .form-form form .email-form .email-input {
+  height: 45px;
+  border: none;
+  padding: 0;
+  width: 100%;
+  font-size: 16px;
+  line-height: 45px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
   padding-left: 30px;
   padding-top: 6px;
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  font-family: "Sarabun";
+}
+body .main-form .s-form .form-form form .pass-form {
+  width: calc(50% - 20px);
+  padding-left: 30px;
+  margin: 0 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  margin-bottom: 25px;
+  height: 45px;
+  box-sizing: border-box;
+}
+body .main-form .s-form .form-form form .pass-form i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  font-size: 18px;
+}
+body .main-form .s-form .form-form form .pass-form .cfpass-input {
+  height: 45px;
+  border: none;
+  padding: 0;
+  width: 100%;
+  font-size: 16px;
+  line-height: 45px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding-left: 30px;
+  padding-top: 6px;
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  font-family: "Sarabun";
+}
+body .main-form .s-form .form-form form .pass-form .pass-input {
+  height: 45px;
+  border: none;
+  padding: 0;
+  width: 100%;
+  font-size: 16px;
+  line-height: 45px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding-left: 30px;
+  padding-top: 6px;
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  font-family: "Sarabun";
+}
+body .main-form .s-form .form-form form .note {
+  font-size: 14px;
+  line-height: 24px;
+  color: #d0021b;
+}
+body .main-form .s-form .form-form form .sty-inp {
   height: 45px;
   border: none;
   padding: 0;
@@ -80,5 +204,127 @@ body .main-form .s-form .form-form form .email-form .email-input {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  box-sizing: border-box;
+}
+body .main-form .s-form .form-form form .sty-inp {
+  line-height: 33px;
+  height: 33px;
+  bottom: 0;
+}
+body .main-form .s-form .form-form form input,
+body .main-form .s-form .form-form form select {
+  vertical-align: middle;
+  overflow: hidden;
+}
+body .main-form .s-form .form-form form .box {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  height: 45px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 10px;
+  margin-bottom: 25px;
+}
+body .main-form .s-form .form-form form .box .box-select {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+body .main-form .s-form .form-form form .box .box-select.att .nav-select {
+  visibility: visible;
+  opacity: 1;
+}
+body .main-form .s-form .form-form form .box .box-select .nav-select {
+  top: 100%;
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  -webkit-box-shadow: 0 0 6px 0 rgba(204, 204, 204, 0.4);
+  -moz-box-shadow: 0 0 6px 0 rgba(204, 204, 204, 0.4);
+  box-shadow: 0 0 6px 0 rgba(204, 204, 204, 0.4);
+  z-index: 5;
+  box-sizing: border-box;
+  color: #777;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  max-height: 250px;
+  overflow-y: scroll;
+}
+body .main-form .s-form .form-form form .box .box-select .nav-select ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+body .main-form .s-form .form-form form .box .box-select .nav-select ul li {
+  width: 100%;
+  cursor: pointer;
+}
+body .main-form .s-form .form-form form .box .box-select .nav-select ul li:hover span {
+  background: #a285eb;
+  color: white;
+}
+body .main-form .s-form .form-form form .box .box-select .nav-select ul li span {
+  padding: 8px 20px;
+  display: block;
+}
+body .main-form .s-form .form-form form .box .nav-input {
+  cursor: pointer;
+  width: 92%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+body .main-form .s-form .form-form form .box .lb_group {
+  color: #222;
+  padding: 8px 20px;
+  display: block;
+}
+body .main-form .s-form .form-form form .box .positionicon {
+  display: block;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  right: 5px;
+  left: auto;
+  font-size: 14px;
+  top: 50%;
+  margin-top: -10px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+body .main-form .s-form .form-form form .box .moveicon {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+body .half {
+  width: calc(50% - 20px);
+}
+body .box-inp {
+  background-color: #FFF;
+  border-bottom: 1px solid #DDD;
+  position: relative;
+  margin-bottom: 25px;
+  height: 45px;
   box-sizing: border-box;
 }

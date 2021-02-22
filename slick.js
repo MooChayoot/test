@@ -401,7 +401,7 @@ function popupmunti() {
     // }
     // $(this)
     //   .parents("body")
-    //   .find(".popup-main iframe").remove()
+    //   .find(".popup-main iframe")
     // let url =   RenderIframe(linksrc);
     // $(".iframepopup").append(url)
 

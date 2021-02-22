@@ -21,11 +21,85 @@
         <div class="form-form">
           <form id="register">
             <div class="title-form">
-              <h2>กรอกข้อมูลเพื่อเข้าสู่ระบบ</h2>
+              <h2 class="sa500">กรอกข้อมูลเพื่อเข้าสู่ระบบ</h2>
             </div>
             <div class="email-form">
-                <i class="icon-cross" ></i>
-                <input class="email-input" type="email" name="mail" data-vld="email">
+              <i class="icon-cross"></i>
+              <input
+                class="email-input fogus"
+                type="email"
+                name="mail"
+                data-vld="email"
+              />
+              <samp class="samp-all">อีเมล</samp>
+            </div>
+            <div class="pass-form">
+              <i class="icon-cross"></i>
+              <input
+                class="pass-input fogus"
+                type="password"
+                name="pass"
+                data-vld="email"
+              />
+              <samp class="samp-all">รหัสผ่าน</samp>
+            </div>
+            <div class="pass-form">
+              <i class="icon-cross"></i>
+              <input
+                class="cfpass-input fogus"
+                type="password"
+                name="cfpass"
+                data-vld="email"
+              />
+              <samp class="samp-all">ยืนยันรหัสผ่าน</samp>
+            </div>
+            <div class="title-form">
+              <h2 class="sa500">กรอกข้อมูลส่วนตัว</h2>
+              <div class="note">
+                *กรอกชื่อ - นามสกุล จริง เพื่อใช้ในการออกใบรับรองการผ่านหลักสูตร
+                e-Certificate กรุณาระบุข้อมูลการสมัครสมาชิกให้ครบถ้วน
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-select">
+                <i class="icon-cross positionicon"></i>
+                <input
+                  class="required"
+                  type="hidden"
+                  name="status"
+                  data-vld="status"
+                  value=""
+                />
+                <div class="nav-input sty-inp"></div>
+                <div class="nav-select">
+                  <span class="lb_group fh_med">โปรดระบุสถานะของท่าน</span>
+                  <ul class="lvl1">
+                    <li class="" data-value="ครูผู้สอน">
+                      <span>ครูผู้สอน</span>
+                    </li>
+                    <li class="" data-value="นักวิชาการ">
+                      <span>นักวิชาการ</span>
+                    </li>
+                    <li class="" data-value="ผู้สนใจทั่วไป">
+                      <span>ผู้สนใจทั่วไป</span>
+                    </li>
+                  </ul>
+                  <span class="lb_group fh_med">ผู้บริหารการศึกษา</span>
+                  <ul class="lvl2">
+                    <li class="" data-value="ผู้อำนวยการโรงเรียน">
+                      <span>ผู้อำนวยการโรงเรียน</span>
+                    </li>
+                    <li class="" data-value="ศึกษานิเทศก์">
+                      <span>ศึกษานิเทศก์</span>
+                    </li>
+                  </ul>
+                </div>
+                <span class="samp-all">สถานภาพ</span>
+              </div>
+              <!-- <div class="box-inp half">
+                <input class="fogus" type="text">
+                <samp class="samp-all">ชื่อ</samp>
+              </div> -->
             </div>
           </form>
         </div>
@@ -39,5 +113,6 @@
       type="text/javascript"
       src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
+    <script type="text/javascript" src="form.js"></script>
   </body>
 </html>
