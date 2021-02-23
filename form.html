@@ -31,15 +31,15 @@
                 name="mail"
                 data-vld="email"
               />
-              <samp class="samp-all">อีเมล</samp>
+              <samp class="samp-all">อีเมลุ</samp>
             </div>
             <div class="pass-form">
               <i class="icon-cross"></i>
               <input
                 class="pass-input fogus"
                 type="password"
-                name="pass"
-                data-vld="email"
+                name="password"
+                data-vld="password"
               />
               <samp class="samp-all">รหัสผ่าน</samp>
             </div>
@@ -49,7 +49,7 @@
                 class="cfpass-input fogus"
                 type="password"
                 name="cfpass"
-                data-vld="email"
+                data-vld="cfpass"
               />
               <samp class="samp-all">ยืนยันรหัสผ่าน</samp>
             </div>
@@ -61,16 +61,16 @@
               </div>
             </div>
             <div class="box">
-              <div class="box-select">
+              <div class="box-select status">
                 <i class="icon-cross positionicon"></i>
                 <input
-                  class="required"
+                  class="status-input"
                   type="hidden"
                   name="status"
                   data-vld="status"
                   value=""
                 />
-                <div class="nav-input sty-inp"></div>
+                <div class="nav-input sty-inp se-status"></div>
                 <div class="nav-select">
                   <span class="lb_group fh_med">โปรดระบุสถานะของท่าน</span>
                   <ul class="lvl1">
@@ -96,10 +96,220 @@
                 </div>
                 <span class="samp-all">สถานภาพ</span>
               </div>
-              <!-- <div class="box-inp half">
-                <input class="fogus" type="text">
-                <samp class="samp-all">ชื่อ</samp>
-              </div> -->
+            </div>
+            <div class="box-inp half">
+              <input class="inputbox fogus name" type="text" data-vld="name" />
+              <samp class="samp-all">ชื่อ</samp>
+            </div>
+            <div class="box-inp half">
+              <input
+                class="inputbox fogus lname"
+                type="text"
+                data-vld="lname"
+              />
+              <samp class="samp-all">นามสกุล</samp>
+            </div>
+            <div class="box-inp half">
+              <input class="inputbox fogus age" type="text" data-vld="age" />
+              <samp class="samp-all">อายุ</samp>
+            </div>
+            <div class="box-inp half">
+              <div class="box-select sex">
+                <i class="icon-cross positionicon"></i>
+                <input
+                  class="sex-input"
+                  type="hidden"
+                  name="status"
+                  data-vld="sex"
+                  value=""
+                />
+                <div class="nav-input sty-inp se-sex"></div>
+                <div class="nav-select">
+                  <span class="lb_group fh_med">โปรดระบุเพศของท่าน</span>
+                  <ul class="lvl1">
+                    <li class="" data-value="ชาย">
+                      <span>ชาย</span>
+                    </li>
+                    <li class="" data-value="หญิง">
+                      <span>หญิง</span>
+                    </li>
+                    <li class="" data-value="อื่นๆ">
+                      <span>อื่นๆ</span>
+                    </li>
+                  </ul>
+                </div>
+                <span class="samp-all">เพศ</span>
+              </div>
+            </div>
+            <div class="box-teach-class">
+              <div class="box-sub-title2">
+                <div class="fh_med">ระดับชั้นที่สอน</div>
+              </div>
+              <div class="note">*สามารถเพิ่มได้มากกว่า 1 ระดับชั้น</div>
+              <div class="group-class-list">
+                <div class="class-itm">
+                  <button class="btn-remove-class fogus" type="button">
+                    <i class="icon-cross"></i>
+                  </button>
+                  <div class="teach-class-group">
+                    <div class="box lvmargin">
+                      <div class="box-select lv">
+                        <i class="icon-cross positionicon"></i>
+                        <input
+                          class="lv-input"
+                          type="hidden"
+                          name="status"
+                          data-vld="lv"
+                          value=""
+                        />
+                        <div class="nav-input sty-inp se-lv"></div>
+                        <div class="nav-select">
+                          <span class="lb_group fh_med"
+                            >โปรดระบุระดับชั้นที่สอน</span
+                          >
+                          <ul class="lvl1">
+                            <li class="" data-value="ปฐมวัย">
+                              <span>ปฐมวัย</span>
+                            </li>
+                            <li class="" data-value="ประถมศึกษาตอนต้นปีที่ 1">
+                              <span>ประถมศึกษาตอนต้นปีที่ 1</span>
+                            </li>
+                            <li class="" data-value="ประถมศึกษาตอนต้นปีที่ 2">
+                              <span>ประถมศึกษาตอนต้นปีที่ 2</span>
+                            </li>
+                            <li class="" data-value="ประถมศึกษาตอนต้นปีที่ 3">
+                              <span>ประถมศึกษาตอนต้นปีที่ 3</span>
+                            </li>
+                            <li class="" data-value="ประถมศึกษาตอนปลายปีที่ 4">
+                              <span>ประถมศึกษาตอนปลายปีที่ 4</span>
+                            </li>
+                            <li class="" data-value="ประถมศึกษาตอนปลายปีที่ 5">
+                              <span>ประถมศึกษาตอนปลายปีที่ 5</span>
+                            </li>
+                            <li class="" data-value="ประถมศึกษาตอนปลายปีที่ 6">
+                              <span>ประถมศึกษาตอนปลายปีที่ 6</span>
+                            </li>
+                            <li class="" data-value="อื่น ๆ">
+                              <span>อื่น ๆ</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <span class="samp-all">ระดับชั้นที่สอน</span>
+                      </div>
+                    </div>
+                    <div class="other-teach">
+                      <div class="box-inp has-dt valid">
+                        <input
+                          class="inputbox fogus oth oth-lv"
+                          type="text"
+                          name="other_teach_class[]"
+                          data-vld="othlv"
+                        /><span class="samp-all">อื่นๆ</span
+                        ><span class="sty-err"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="teach-subject-group">
+                    <div class="box lvmargin">
+                      <div class="box-select subject">
+                        <i class="icon-cross positionicon"></i>
+                        <input
+                          class="subject-input"
+                          type="hidden"
+                          name="status"
+                          data-vld="subject"
+                          value=""
+                        />
+                        <div class="nav-input sty-inp se-subject"></div>
+                        <div class="nav-select">
+                          <span class="lb_group fh_med"
+                            >โปรดระบุวิชาที่สอน</span
+                          >
+                          <ul class="lvl1">
+                            <li class="" data-value="คณิตศาสตร์">
+                              <span>คณิตศาสตร์</span>
+                            </li>
+                            <li class="" data-value="วิทยาศาสตร์">
+                              <span>วิทยาศาสตร์</span>
+                            </li>
+                            <li class="" data-value="ภาษาไทย">
+                              <span>ภาษาไทย</span>
+                            </li>
+                            <li class="" data-value="ภาษาอังกฤษ">
+                              <span>ภาษาอังกฤษ</span>
+                            </li>
+                            <li class="" data-value="การงานอาชีพ">
+                              <span>การงานอาชีพ</span>
+                            </li>
+                            <li class="" data-value="สังคมศึกษา">
+                              <span>สังคมศึกษา</span>
+                            </li>
+                            <li class="" data-value="สุขศึกษา">
+                              <span>สุขศึกษา</span>
+                            </li>
+                            <li class="" data-value="พละศึกษา">
+                              <span>พละศึกษา</span>
+                            </li>
+                            <li class="" data-value="ศิลปะ">
+                              <span>ศิลปะ</span>
+                            </li>
+                            <li class="" data-value="อื่น ๆ">
+                              <span>อื่น ๆ</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <span class="samp-all">วิชาที่สอน</span>
+                      </div>
+                    </div>
+                    <div class="other-teach">
+                      <div class="box-inp">
+                        <input
+                          class="inputbox fogus oth oth-sub"
+                          type="text"
+                          name="other_teach_subject[]"
+                          data-vld="othsubject"
+                        />
+                        <span class="samp-all">อื่นๆ</span>
+                        <span class="sty-err"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="btn-add-class fogus"
+                type="button"
+                data-bx="group-class-list"
+              >
+                <i class="icon-cross"></i
+                ><span class="lb">เพิ่มระดับชั้นที่สอน</span>
+              </button>
+            </div>
+            <div class="box-ckb">
+              <label class="ctn-checkbox fn_light"
+                ><span>ยอมรับ </span
+                ><a class="under-line" href="privacy-policy" target="_blank"
+                  >เงื่อนไขการใช้และนโยบายคุ้มครองข้อมูลส่วนบุคคล</a
+                >
+                <input
+                  id="accept"
+                  class="required"
+                  type="checkbox"
+                  name="accept"
+                  value="T"
+                  data-vld="accept"
+                />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="box-btn">
+              <button
+                id="btn_register"
+                type="button"
+                class="btn sty-a fofo fh_samibold"
+              >
+                สมัครสมาชิก
+              </button>
             </div>
           </form>
         </div>
