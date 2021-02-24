@@ -8,8 +8,12 @@
   <body>
     <div class="main-form">
       <div class="s-form">
-        <div class="header-form">
-          <h1>
+        <div id="tp" style="position: fixed; top: 0"/></div>
+        <div id="bm" style="position: fixed; bottom: 0"/></div>
+        <div id="asd" class="header-form" >
+        <!-- <div id="asd" class="header-form" style="position: fixed; bottom: 0"> -->
+          <h1 id="ss" >
+            <!-- <h1 id="ss" style="display: none"> -->
             <span> สมัครสมาชิก </span>
             <span class="h1col"> e-Learning </span>
           </h1>
@@ -98,7 +102,7 @@
               </div>
             </div>
             <div class="box-inp half">
-              <input class="inputbox fogus name" type="text" data-vld="name" />
+              <input class="inputbox fogus name" type="text" data-vld="name" name="name"/>
               <samp class="samp-all">ชื่อ</samp>
             </div>
             <div class="box-inp half">
@@ -106,11 +110,12 @@
                 class="inputbox fogus lname"
                 type="text"
                 data-vld="lname"
+                name="lname"
               />
               <samp class="samp-all">นามสกุล</samp>
             </div>
             <div class="box-inp half">
-              <input class="inputbox fogus age" type="text" data-vld="age" />
+              <input class="inputbox fogus age" type="text" data-vld="age" name="age"/>
               <samp class="samp-all">อายุ</samp>
             </div>
             <div class="box-inp half">
@@ -119,7 +124,7 @@
                 <input
                   class="sex-input"
                   type="hidden"
-                  name="status"
+                  name="sex"
                   data-vld="sex"
                   value=""
                 />
@@ -158,7 +163,7 @@
                         <input
                           class="lv-input"
                           type="hidden"
-                          name="status"
+                          name="lv[]"
                           data-vld="lv"
                           value=""
                         />
@@ -202,8 +207,8 @@
                         <input
                           class="inputbox fogus oth oth-lv"
                           type="text"
-                          name="other_teach_class[]"
                           data-vld="othlv"
+                          name="othlv[]"
                         /><span class="samp-all">อื่นๆ</span
                         ><span class="sty-err"></span>
                       </div>
@@ -216,7 +221,7 @@
                         <input
                           class="subject-input"
                           type="hidden"
-                          name="status"
+                          name="subject[]"
                           data-vld="subject"
                           value=""
                         />
@@ -266,7 +271,7 @@
                         <input
                           class="inputbox fogus oth oth-sub"
                           type="text"
-                          name="other_teach_subject[]"
+                          name="othsub[]"
                           data-vld="othsubject"
                         />
                         <span class="samp-all">อื่นๆ</span>
@@ -288,7 +293,7 @@
             <div class="box-ckb">
               <label class="ctn-checkbox fn_light"
                 ><span>ยอมรับ </span
-                ><a class="under-line" href="privacy-policy" target="_blank"
+                ><a class="under-line" href="#" target="_blank"
                   >เงื่อนไขการใช้และนโยบายคุ้มครองข้อมูลส่วนบุคคล</a
                 >
                 <input
@@ -296,7 +301,7 @@
                   class="required"
                   type="checkbox"
                   name="accept"
-                  value="T"
+                  value="F"
                   data-vld="accept"
                 />
                 <span class="checkmark"></span>
@@ -324,5 +329,6 @@
       src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
     <script type="text/javascript" src="form.js"></script>
+    <!-- <script type="text/javascript" src="api.js"></script> -->
   </body>
 </html>

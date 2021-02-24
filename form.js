@@ -1,3 +1,6 @@
+var repage = false;
+var toppage = 0;
+var bottompage = 0;
 $(document).ready(function () {
   emailInput();
   passInput();
@@ -11,7 +14,31 @@ $(document).ready(function () {
   addeml();
   delElm();
   submit();
+  showpage();
+  scrollpage();
 });
+function scrollpage() {
+  $(window).scroll(function () {
+    if ($("#bm").offset().top <= bottompage) {
+      $("#ss").fadeOut("slow");
+    } else {
+      $("#ss").fadeIn("slow");
+    }
+  });
+}
+
+function showpage() {
+  if (repage === false) {
+    let tp = $("#tp").first();
+    let pagetop = tp.position();
+    toppage = pagetop.top;
+    let bm = $("#bm").first();
+    let pagebottom = bm.position();
+    bottompage = pagebottom.top;
+    repage = true;
+  }
+}
+
 function validateForm(val, typeVld, elm) {
   let checkValid = true;
   if (typeVld == "email") {
@@ -401,7 +428,6 @@ function changSex() {
       if (elmBoxSelect.hasClass("att")) {
         elmBoxSelect.removeClass("att");
         elmBoxSelect.find("i").removeClass("moveicon");
-        console.log(elmBoxSelect.parents("body").find(".sex-input").val());
         if (
           elmBoxSelect.parents("body").find(".sex-input").val() === "" ||
           elmBoxSelect.parents("body").find(".sex-input").val() === null ||
@@ -437,6 +463,15 @@ function selectstatus() {
         .parent()
         .find(".other-teach")
         .removeClass("other-open");
+        $(this)
+        .parents(".box.lvmargin")
+        .parent()
+        .find(".samp-err").remove();
+        focusin($(this)
+        .parents(".box.lvmargin")
+        .parent()
+        .find("input"))
+        
     }
   });
 }
@@ -475,15 +510,17 @@ function submit() {
     let sex = $(this).parents("form").find(".sex-input");
     let lv = $(this).parents("form").find(".lv-input");
     let subject = $(this).parents("form").find(".subject-input");
-
+    let err = true;
     if (
       email.val() === "" ||
       email.val() === null ||
       email.val() === undefined
     ) {
+      err = false;
       addError(email, email.val());
     }
     if (pass.val() === "" || pass.val() === null || pass.val() === undefined) {
+      err = false;
       addError(pass, pass.val());
     }
     if (
@@ -491,6 +528,7 @@ function submit() {
       cfpass.val() === null ||
       cfpass.val() === undefined
     ) {
+      err = false;
       addError(cfpass, cfpass.val());
     }
     if (
@@ -498,9 +536,11 @@ function submit() {
       status.val() === null ||
       status.val() === undefined
     ) {
+      err = false;
       addError(status, status.val());
     }
     if (name.val() === "" || name.val() === null || name.val() === undefined) {
+      err = false;
       addError(name, name.val());
     }
     if (
@@ -508,23 +548,27 @@ function submit() {
       lname.val() === null ||
       lname.val() === undefined
     ) {
+      err = false;
       addError(lname, lname.val());
     }
 
     if (age.val() === "" || age.val() === null || age.val() === undefined) {
+      err = false;
       addError(age, age.val());
     }
     if (sex.val() === "" || sex.val() === null || sex.val() === undefined) {
+      err = false;
       addError(sex, sex.val());
     }
 
     if (lv.length > 0) {
-      lv.each(function (index) {
+      lv.each(function (id) {
         if (
           $(this).val() === "" ||
           $(this).val() === null ||
           $(this).val() === undefined
         ) {
+          err = false;
           addError($(this), $(this).val());
         }
         if ($(this).val() === "อื่น ๆ") {
@@ -535,7 +579,10 @@ function submit() {
               $(this).val() === null ||
               $(this).val() === undefined
             ) {
-              addError($(this), $(this).val());
+              if ($(this).val() === "" && id === index) {
+                err = false;
+                addError($(this), $(this).val());
+              }
             }
           });
         }
@@ -543,12 +590,13 @@ function submit() {
     }
 
     if (subject.length > 0) {
-      subject.each(function (index) {
+      subject.each(function (id) {
         if (
           $(this).val() === "" ||
           $(this).val() === null ||
           $(this).val() === undefined
         ) {
+          err = false;
           addError($(this), $(this).val());
         }
         if ($(this).val() === "อื่น ๆ") {
@@ -559,10 +607,32 @@ function submit() {
               $(this).val() === null ||
               $(this).val() === undefined
             ) {
-              addError($(this), $(this).val());
+              if ($(this).val() === "" && id === index) {
+                err = false;
+                addError($(this), $(this).val());
+              }
             }
           });
         }
+      });
+    }
+    if ($("#accept").prop("checked") === false) {
+      err = false;
+      alert("ยอมรับเงื่อนไขการใช้และนโยบายคุ้มครองข้อมูลส่วนบุคคล ด้วยยย");
+    }
+    if (err === true) {
+      let data = $("#register").serialize();
+      $.ajax({
+        url: "ajj.php",
+        data: data,
+        type: "POST",
+        dataType: "json",
+        beforeSend: function () {},
+        success: function (results) {
+          console.log(results);
+        },
+        error: function (xhr) {},
+        complete: function () {},
       });
     }
   });

@@ -315,6 +315,11 @@ body .main-form .s-form .form-form form .samp-err {
   left: 0;
   font-family: "Sarabun";
 }
+body .main-form .s-form .form-form form .under-line {
+  outline: 0 none;
+  cursor: pointer;
+  text-decoration: none;
+}
 body .main-form .s-form .form-form form .note {
   font-size: 14px;
   line-height: 24px;
